@@ -1,0 +1,71 @@
+{
+  "habitaciones": [
+    {
+      "id": 1,
+      "numero": "101",
+      "tipo": "simple",
+      "precio_por_noche": 80.0,
+      "disponible": false
+    },
+    {
+      "id": 2,
+      "numero": "102",
+      "tipo": "doble",
+      "precio_por_noche": 120.0,
+      "disponible": true
+    },
+    {
+      "id": 3,
+      "numero": "201",
+      "tipo": "suite",
+      "precio_por_noche": 250.0,
+      "disponible": false
+    },
+    {
+      "id": 4,
+      "numero": "202",
+      "tipo": "doble",
+      "precio_por_noche": 130.0,
+      "disponible": true
+    },
+    {
+      "id": 5,
+      "numero": "301",
+      "tipo": "suite",
+      "precio_por_noche": 300.0,
+      "disponible": true
+    }
+  ],
+  "reservas": [
+    {
+      "id": 1,
+      "habitacion_id": 1,
+      "nombre_huesped": "Carlos Mendoza",
+      "email_huesped": "carlos.mendoza@email.com",
+      "fecha_entrada": "2025-03-01",
+      "fecha_salida": "2025-03-05",
+      "total": 320.0,
+      "estado": "activa"
+    },
+    {
+      "id": 2,
+      "habitacion_id": 3,
+      "nombre_huesped": "Ana Lucia Torres",
+      "email_huesped": "ana.torres@email.com",
+      "fecha_entrada": "2025-03-02",
+      "fecha_salida": "2025-03-07",
+      "total": 1250.0,
+      "estado": "activa"
+    },
+    {
+      "id": 3,
+      "habitacion_id": 2,
+      "nombre_huesped": "Miguel Fernandez",
+      "email_huesped": "miguel.fernandez@email.com",
+      "fecha_entrada": "2025-02-20",
+      "fecha_salida": "2025-02-25",
+      "total": 600.0,
+      "estado": "completada"
+    }
+  ]
+}
