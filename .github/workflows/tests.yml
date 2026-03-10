@@ -1,28 +1,25 @@
-name: Tests y Lint
-
-on:
-  push:
-    branches: [main, develop]
-  pull_request:
-    branches: [main]
+name: Python Tests and Linting
+on: [push, pull_request]
 
 jobs:
-  test:
+  quality:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - name: Instalar uv
-        uses: astral-sh/setup-uv@v3
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
 
-      - name: Configurar Python
-        run: uv python install 3.11
+      - name: Set up python
+        uses: actions/setup-python@v4
+        with:
+          python-version-file: "pyproject.toml"
 
-      - name: Instalar dependencias
-        run: uv sync --extra dev
-
-      - name: Ejecutar Ruff (lint)
+      - name: Run Ruff (linter)
         run: uv run ruff check .
 
-      - name: Ejecutar pruebas
-        run: uv run pytest --tb=short -v
+      - name: Run tests
+        run: uv run pytest -vclear
+        
