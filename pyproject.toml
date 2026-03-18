@@ -9,4 +9,5 @@ dependencies = [
     "radon>=6.0.1",
     "ruff>=0.15.5",
     "pytest>=9.0.2",
+    "mkdocs>=1.6.1",
 ]
